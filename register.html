@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Register | ShopEase</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.form-container{
+width:400px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.form-container h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.form-container input{
+width:100%;
+padding:12px;
+margin:12px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.form-container button{
+width:100%;
+padding:12px;
+background:#ff9800;
+color:white;
+border:none;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.form-container p{
+text-align:center;
+margin-top:20px;
+}
+
+.form-container a{
+color:#ff9800;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Create Account</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<input type="password" id="confirm" placeholder="Confirm Password">
+
+<button onclick="register()">Register</button>
+
+<p>
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+<script>
+
+function register(){
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+let confirm=document.getElementById("confirm").value;
+
+if(name==""||email==""||password==""||confirm==""){
+
+alert("Please fill all fields");
+
+return;
+
+}
+
+if(password!=confirm){
+
+alert("Passwords do not match");
+
+return;
+
+}
+
+alert("Registration Successful");
+
+window.location="login.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

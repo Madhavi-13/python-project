@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - E-Commerce</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>🛒 ShopEase</h2>
+    </div>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="product.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="payment.html">
+            <button>Proceed to Payment</button>
+        </a>
+        <a href="success.html"></a>
+     
+    </nav>
+
+    <div class="icons">
+
+        <div class="search-box">
+            <input type="text" id="search"
+                placeholder="Search Products..."
+                onkeyup="searchProducts()">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <button id="theme">🌙</button>
+
+        <div class="cart">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="count">0</span>
+            </a>
+        </div>
+
+        <i class="fas fa-bars" id="menu"></i>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Summer Mega Sale</h1>
+        <p>Up to 70% OFF on Fashion & Electronics</p>
+
+        <a href="products.html">
+            <button>Shop Now</button>
+        </a>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+    <h2>Shop by Category</h2>
+
+    <div class="category-box">
+
+        <div class="cat">👕 Fashion</div>
+
+        <div class="cat">📱 Electronics</div>
+
+        <div class="cat">⌚ Watches</div>
+
+        <div class="cat">🎒 Bags</div>
+
+        <div class="cat">👟 Shoes</div>
+
+        <div class="cat">💻 Laptops</div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="product">
+
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://picsum.photos/300?1">
+            <h3>White Shoes</h3>
+            <p>₹1,499</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?2">
+            <h3>Headphones</h3>
+            <p>₹999</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?3">
+            <h3>Smart Watch</h3>
+            <p>₹2,999</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?4">
+            <h3>Backpack</h3>
+            <p>₹899</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?5">
+            <h3>Smart Phone</h3>
+            <p>₹18,999</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?6">
+            <h3>DSLR Camera</h3>
+            <p>₹34,999</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?7">
+            <h3>Laptop</h3>
+            <p>₹59,999</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300?8">
+            <h3>Bluetooth Speaker</h3>
+            <p>₹1,899</p>
+            <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+<button id="payBtn">Proceed to Pay</button>
+
+<script>
+document.getElementById("payBtn").addEventListener("click", function () {
+    alert("Payment Successful!");
+    window.location.href = "success.html";
+});
+</script>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>🛒 ShopEase</h2>
+
+    <p>Your One-Stop Online Shopping Destination.</p>
+
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

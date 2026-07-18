@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart | ShopEase</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#fff;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.cart-item img{
+    width:100px;
+    border-radius:8px;
+}
+
+.info{
+    flex:1;
+    margin-left:20px;
+}
+
+.qty button{
+    padding:5px 10px;
+    margin:0 5px;
+}
+
+.remove{
+    background:red;
+    color:#fff;
+    border:none;
+    padding:8px 15px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.summary{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:right;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.pay{
+    margin-top:15px;
+    padding:12px 30px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🛒 Shopping Cart</h1>
+
+<div class="cart-item">
+
+<img src="https://picsum.photos/100?1">
+
+<div class="info">
+<h3>White Shoes</h3>
+<p>₹1499</p>
+</div>
+
+<div class="qty">
+<button onclick="decrease()">-</button>
+<span id="qty">1</span>
+<button onclick="increase()">+</button>
+</div>
+
+<button class="remove" onclick="removeItem()">
+Remove
+</button>
+
+</div>
+
+<div class="summary">
+
+<h2>Total : ₹<span id="total">1499</span></h2>
+
+<button class="pay" onclick="location.href='payment.html'">
+Proceed to Payment
+</button>
+
+</div>
+
+</div>
+
+<script>
+let qty = 1;
+let price = 1499;
+
+function updateTotal(){
+document.getElementById("qty").innerHTML = qty;
+document.getElementById("total").innerHTML = qty * price;
+}
+
+function increase(){
+qty++;
+updateTotal();
+}
+
+function decrease(){
+if(qty>1){
+qty--;
+updateTotal();
+}
+}
+
+function removeItem(){
+document.querySelector(".cart-item").remove();
+document.getElementById("total").innerHTML="0";
+}
+</script>
+
+</body>
+</html>
